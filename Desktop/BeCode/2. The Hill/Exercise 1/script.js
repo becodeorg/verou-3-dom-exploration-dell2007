@@ -10,3 +10,9 @@ function generateRandomColorRgb() {
     return "rgb(" + red + ", " + green + ", " + blue + ")";
 }
 document.body.style.backgroundColor = generateRandomColorRgb();
+
+var children = document.body.children;
+
+for (var x of children) {
+    console.log (x);
+}
