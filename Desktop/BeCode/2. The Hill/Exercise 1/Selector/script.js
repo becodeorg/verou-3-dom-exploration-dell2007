@@ -20,3 +20,17 @@ for (var i of allImg){
     i.style.display="none";
     }
 }*/
+
+var parg = document.querySelectorAll("p");
+console.log(parg);
+for (var x=0; x <parg.length; x++){
+    console.log(parg[x]);
+    parg[x].style.color = pargRgb();
+}
+
+function pargRgb() {
+    var red = Math.round(Math.random() * 255);
+    var green = Math.round(Math.random() * 255);
+    var blue = Math.round(Math.random() * 255);
+    return "rgb(" + red + ", " + green + ", " + blue + ")";
+}
