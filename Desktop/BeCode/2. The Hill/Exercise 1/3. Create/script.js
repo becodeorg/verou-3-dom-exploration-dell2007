@@ -1,6 +1,10 @@
+//Array with promo names
 const promo = ["Ahmad", "Jian", "Michael", "Dante", "Muhammet", "Nicolas", "Jordy", "Beryl", "Cynthia", "Ruben", "Magali", "Jawid",
     "Koen", "Kevin", "Benjamin", "Dery", "Michelle", "Colin", "Feruz", "Pieter", "Ellen", "Sara"
 ];
+
+//Shuffle array
+const shuffledName = promo.sort((a, b) => 0.5 - Math.random());
 
 // Add a random color 
 function generateRandomColorRgb() {
@@ -23,8 +27,8 @@ function getTextColor(rgba) {
 //Add a new element
 function addElement(name) {
     const newSection = document.createElement("section"); //Create a section
-    newSection.style.backgroundColor = generateRandomColorRgb();
-    newSection.style.color = getTextColor (newSection.style.backgroundColor);
+    newSection.style.backgroundColor = generateRandomColorRgb(); //Assign random bgC to the section
+    newSection.style.color = getTextColor (newSection.style.backgroundColor); //Assign random color to the text declaring between parenthesis  the bgC
     const article = document.querySelector("article"); //Select the article
     article.appendChild(newSection); //Append the section to the article
     const newPar = document.createElement("p"); //Create a P
