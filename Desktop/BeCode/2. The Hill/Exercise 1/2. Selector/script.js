@@ -1,5 +1,5 @@
 var newTitle= document.getElementsByClassName("important");
-var i;
+var i; //you can declare the var outside as inside the loop
 for ( i = 0; i < newTitle.length; i++) {
     newTitle[i].setAttribute("title", "This is an important item");
 }
@@ -34,3 +34,4 @@ function pargRgb() {
     var blue = Math.round(Math.random() * 255);
     return "rgb(" + red + ", " + green + ", " + blue + ")";
 }
+//A for loop was created to search for all the paragraph and a new function to give random color was called it inside of the loop to give this effect

@@ -12,7 +12,6 @@ function generateRandomColorRgb() {
 document.body.style.backgroundColor = generateRandomColorRgb();
 
 var children = document.body.children;
-
 for (var x of children) {
     console.log (x);
 }
