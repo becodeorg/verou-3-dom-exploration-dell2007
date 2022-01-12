@@ -1,4 +1,4 @@
-const COLLECTION = [{
+const games = [{
         name: 'Mario Bros',
         director: 'Shigeru Miyamoto & Gunpei Yokoi',
         releaseYear: 1983,
@@ -64,18 +64,53 @@ const COLLECTION = [{
     },
     {
         name: 'Super Mario Odyssey',
-        director: '	Kenta Motokura',
+        director: 'Kenta Motokura',
         releaseYear: 2017,
         picture: 'link/to/a/picture',
         platform: ['Nintendo Switch'],
         trailer: ['"#"']
     },
     {
-        name: '•	Super Mario 3D World + Bowser Fury ',
-        director: '	Koichi Hayashida & Kenta Motokura',
+        name: 'Super Mario 3D World + Bowser Fury ',
+        director: 'Koichi Hayashida & Kenta Motokura',
         releaseYear: 2021,
         picture: 'link/to/a/picture',
         platform: ['Nintendo Switch'],
         trailer: ['"#"']
     }
 ]
+
+const existDiv = document.querySelector("div");
+
+for (const game of games) {
+        const newDiv = document.createElement("div");
+        newDiv.className = "card"; //Class for styling
+ 
+        const nTitle = document.createElement("h2")
+        nTitle.textContent=game.name;
+        newDiv.appendChild(nTitle);
+
+        const nPic = document.createElement("img")
+        nPic.textContent=game.picture;
+        newDiv.appendChild(nPic);
+
+        const nDirector = document.createElement("p")
+        nDirector.textContent=game.director;
+        newDiv.appendChild(nDirector);
+
+        const year = document.createElement("p")
+        year.textContent=game.releaseYear;
+        newDiv.appendChild(year);
+        
+        const platform = document.createElement("p")
+        platform.textContent=game.platform;
+        newDiv.appendChild(platform);
+
+        const trailer = document.createElement("a")
+        trailer.textContent=game.trailer;
+        newDiv.appendChild(trailer);
+
+        existDiv.appendChild(newDiv);
+    }
+
+    console.log("nTitle")
