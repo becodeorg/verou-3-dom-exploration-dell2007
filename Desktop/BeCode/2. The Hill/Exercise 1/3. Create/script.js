@@ -1,7 +1,6 @@
 //Array with promo names
 const promo = ["Ahmad", "Jian", "Michael", "Dante", "Muhammet", "Nicolas", "Jordy", "Beryl", "Cynthia", "Ruben", "Magali", "Jawid",
-    "Koen", "Kevin", "Benjamin", "Dery", "Michelle", "Colin", "Feruz", "Pieter", "Ellen", "Sara"
-];
+    "Koen", "Kevin", "Benjamin", "Dery", "Michelle", "Colin", "Feruz", "Pieter", "Ellen", "Sara"];
 
 //Shuffle array
 const shuffledName = promo.sort((a, b) => 0.5 - Math.random());
@@ -24,23 +23,16 @@ function getTextColor(rgba) {
     }
 }
 
-//Add a new element
-function addElement(name) {
-    const newSection = document.createElement("section"); //Create a section
-    newSection.style.backgroundColor = generateRandomColorRgb(); //Assign random bgC to the section
-    newSection.style.color = getTextColor (newSection.style.backgroundColor); //Assign random color to the text declaring between parenthesis  the bgC
-    const article = document.querySelector("article"); //Select the article
-    article.appendChild(newSection); //Append the section to the article
-    const newPar = document.createElement("p"); //Create a P
-    newSection.appendChild(newPar); //Append the P to the section
-    const newContent = document.createTextNode(name); //Add text from the array which was organize in the loop
-    newPar.appendChild(newContent); //Append the text to the P
-}
-
-//Loop added to select all the names individually
+//Loop to select all the names individually
 for (let i = 0; i < promo.length; i++) {
     const name = promo[i];
-    addElement(name);
-}
-
-// document.body.onload = addElement;
+        const newSection = document.createElement("section"); //Create a section
+        newSection.style.backgroundColor = generateRandomColorRgb(); //Assign random bgC to the section
+        newSection.style.color = getTextColor (newSection.style.backgroundColor); //Assign random color to the text declaring between parenthesis  the bgC
+        const article = document.querySelector("article"); //Select the article
+        article.appendChild(newSection); //Append the section to the article
+        const newPar = document.createElement("p"); //Create a P
+        newSection.appendChild(newPar); //Append the P to the section
+        const newContent = document.createTextNode(name); //Add text from the array which was organize in the loop
+        newPar.appendChild(newContent); //Append the text to the P
+    }
