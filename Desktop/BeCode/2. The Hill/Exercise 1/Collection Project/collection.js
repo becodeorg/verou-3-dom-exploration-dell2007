@@ -45,7 +45,7 @@ const games = [{
         picture: 'link/to/a/picture',
         platform: ['GameCube'],
         trailer: ['"#"']
-    }, 
+    },
     {
         name: 'Super Mario Sunshine',
         director: 'Yoshiaki Koizumi & Kenta Usui',
@@ -81,36 +81,39 @@ const games = [{
 ]
 
 const existDiv = document.querySelector("div");
+existDiv.className = "container"; //Container to manager the whole body
 
 for (const game of games) {
-        const newDiv = document.createElement("div");
-        newDiv.className = "card"; //Class for styling
- 
-        const nTitle = document.createElement("h2")
-        nTitle.textContent=game.name;
-        newDiv.appendChild(nTitle);
+    const newDiv = document.createElement("div"); //New div created
+    newDiv.className = "card"; //Class for styling
 
-        const nPic = document.createElement("img")
-        nPic.textContent=game.picture;
-        newDiv.appendChild(nPic);
+    const nPic = document.createElement("img")
+    nPic.textContent = game.picture;
+    nPic.className = "pic";
+    newDiv.appendChild(nPic);
+    
+    const otherDiv = document.createElement("div");
+    newDiv.appendChild(otherDiv);
 
-        const nDirector = document.createElement("p")
-        nDirector.textContent=game.director;
-        newDiv.appendChild(nDirector);
+    const nTitle = document.createElement("h2") //New tittle created
+    nTitle.textContent = game.name;
+    otherDiv.appendChild(nTitle);
 
-        const year = document.createElement("p")
-        year.textContent=game.releaseYear;
-        newDiv.appendChild(year);
-        
-        const platform = document.createElement("p")
-        platform.textContent=game.platform;
-        newDiv.appendChild(platform);
+    const platform = document.createElement("p")
+    platform.textContent = game.platform;
+    otherDiv.appendChild(platform);
 
-        const trailer = document.createElement("a")
-        trailer.textContent=game.trailer;
-        newDiv.appendChild(trailer);
+    const year = document.createElement("p")
+    year.textContent = game.releaseYear;
+    platform.appendChild(year);
 
-        existDiv.appendChild(newDiv);
-    }
+    const nDirector = document.createElement("p")
+    nDirector.textContent = game.director;
+    otherDiv.appendChild(nDirector);
 
-    console.log("nTitle")
+    const trailer = document.createElement("a")
+    trailer.textContent = game.trailer;
+    otherDiv.appendChild(trailer);
+
+    existDiv.appendChild(newDiv);
+}
