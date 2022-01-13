@@ -4,28 +4,57 @@
 }
 
 body {
-    background-image: url(#);
-    background-attachment: fixed;
+    background-image: url(/Info/background4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     background-color: red;
 }
 
 .container {
-    margin: 0 auto;
+    margin: 20px auto;
     width: 90%;
+    text-align: center;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fill, 260px);
     grid-gap: 5px;
 }
 
 .card {
     border: 2px solid black;
-    border-radius: 5px;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
 }
 
 img {
     max-width: 100%;
     max-height: 100%;
 }
+
+h1,
+h2,
+p {
+    color: white;
+}
+
+.card p {
+    text-align: left;
+}
+
+/*@media screen and (max-width: 480px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 481px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat (3, 1fr);
+    }
+}*/

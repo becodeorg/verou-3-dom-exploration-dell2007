@@ -19,7 +19,7 @@ const games = [{
         director: 'Shigeru Miyamoto and Takashi Tezuka',
         releaseYear: 1990,
         picture: '/Info/3. S M World.jpg',
-        platform: ['/Info/3. Super Mario World.png'],
+        platform: ['Super NES'],
         trailer: ['"#"']
     },
     {
