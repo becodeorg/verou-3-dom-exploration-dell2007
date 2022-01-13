@@ -24,6 +24,7 @@ body {
 }
 
 .card {
+    background-color: rgba(255, 251, 251, 0.3);
     border: 2px solid black;
     border-radius: 10px;
     margin: 5px;
@@ -39,6 +40,10 @@ h1,
 h2,
 p {
     color: white;
+}
+
+.text {
+    padding: 20px;
 }
 
 .card p {
