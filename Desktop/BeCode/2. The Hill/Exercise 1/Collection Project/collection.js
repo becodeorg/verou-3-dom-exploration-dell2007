@@ -114,13 +114,13 @@ for (const game of games) {
     nTitle.textContent = game.name;
     otherDiv.appendChild(nTitle);
 
+    const year = document.createElement("p");
+    year.textContent = game.releaseYear;
+    otherDiv.appendChild(year);
+
     const platform = document.createElement("p");
     platform.textContent = game.platform;
     otherDiv.appendChild(platform);
-
-    const year = document.createElement("p");
-    year.textContent = game.releaseYear;
-    platform.appendChild(year);
 
     const nDirector = document.createElement("p");
     nDirector.textContent = game.director;
@@ -140,7 +140,7 @@ for (const game of games) {
 
     const utube = document.createElement("img");
     utube.src = game.img;
-    anotherDiv.appendChild(utube);
+    trailer.appendChild(utube);
 
     gridCont.appendChild(newDiv);
 }
