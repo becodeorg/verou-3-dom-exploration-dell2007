@@ -43,12 +43,19 @@ p {
 }
 
 .text {
-    padding: 20px;
+    height: 150px;
+    padding: 10px;
+}
+
+.logo img {
+    width: 30%;
+    height: 30%;
 }
 
 .card p {
     text-align: left;
 }
+
 
 @media screen and (max-width: 1000px) {
     .grid-container {

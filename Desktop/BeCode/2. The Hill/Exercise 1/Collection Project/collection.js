@@ -126,14 +126,21 @@ for (const game of games) {
     nDirector.textContent = game.director;
     otherDiv.appendChild(nDirector);
 
+    const anotherDiv = document.createElement("div");
+    newDiv.appendChild(anotherDiv);
+    anotherDiv.className = "logo";
+
+    const line = document.createElement("hr");
+    anotherDiv.appendChild(line);
+
     const trailer = document.createElement("a");
     trailer.href = game.trailer;
-    
-    otherDiv.appendChild(trailer);
+    trailer.target = "_blank";
+    anotherDiv.appendChild(trailer);
 
     const utube = document.createElement("img");
-    utube.src= game.img;
-    trailer.appendChild(utube);
+    utube.src = game.img;
+    anotherDiv.appendChild(utube);
 
     gridCont.appendChild(newDiv);
 }
