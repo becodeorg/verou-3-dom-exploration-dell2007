@@ -27,7 +27,17 @@ body {
     background-color: rgba(255, 251, 251, 0.3);
     border: 2px solid black;
     border-radius: 10px;
-    margin: 5px;
+    margin: 10px;
+    padding: 5px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px white;
+}
+
+.card p {
+    text-align: left;
     padding: 5px;
 }
 
@@ -38,6 +48,14 @@ img {
 
 header {
     padding: 10px;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+header p {
+    font-size: 20px;
 }
 
 h1,
@@ -56,20 +74,20 @@ p {
     height: 30%;
 }
 
-.card p {
-    text-align: left;
-    padding: 5px;
-}
-
 hr {
     border: 1px das;
 }
 
+footer {
+    text-align: center;
+    margin: 10px;
+}
 
 @media screen and (max-width: 1000px) {
     .grid-container {
         display: grid;
-        grid-template-columns: repeat(auto-fill, 260px)
+        grid-template-columns: repeat(auto-fill, 260px);
+        margin: 20px;
     }
 }
 

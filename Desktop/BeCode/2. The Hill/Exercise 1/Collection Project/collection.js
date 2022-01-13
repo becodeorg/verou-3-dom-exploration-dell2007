@@ -80,7 +80,7 @@ const games = [{
         img: '/Info/ytube.svg'
     },
     {
-        name: 'Super Mario 3D World + Bowser Fury ',
+        name: 'Super Mario 3D World',
         director: 'Koichi Hayashida & Kenta Motokura',
         releaseYear: 2021,
         picture: '/Info/10. Mario 3D.jpg',
