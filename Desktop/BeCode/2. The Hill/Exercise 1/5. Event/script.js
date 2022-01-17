@@ -20,5 +20,22 @@ function clickOnSquare(e) {
 
 const actionsquares = document.querySelectorAll('.actionsquare')
 for (let actionsquare of actionsquares) {
-    actionsquare.addEventListener('click', clickOnSquare)
+    actionsquare.addEventListener('click', clickOnSquare);
+}
+
+// Changing background color
+const background = document.getElementsByTagName('body')
+document.addEventListener('keypress', (Event) => {
+    backColor();
+    console.log(Event.key);
+});
+function backColor() {
+    document.body.style.backgroundColor = randomColor();
+} 
+
+function randomColor() {
+    var red = Math.round(Math.random() * 255);
+    var green = Math.round(Math.random() * 255);
+    var blue = Math.round(Math.random() * 255);
+    return "rgb(" + red + ", " + green + ", " + blue + ")";
 }
