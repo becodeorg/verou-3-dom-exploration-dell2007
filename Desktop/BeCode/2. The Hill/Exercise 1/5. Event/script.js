@@ -37,13 +37,13 @@ for (let actionsquare of actionsquares) {
 const background = document.getElementsByTagName('body')
 document.addEventListener('keydown', function(event) {
     if (event.key === " ") {
-    backColor()}
-
+    backColor()
     //Create a log when background change color
-const otherList = document.createElement('li');
-const sameList = document.querySelector('ul');
-sameList.appendChild(otherList);
-otherList.innerText = '[' + getElapsedTime() + ']' + ' Changed background color ' + event.key;
+    const otherList = document.createElement('li');
+    const sameList = document.querySelector('ul');
+    sameList.appendChild(otherList);
+    otherList.innerText = '[' + getElapsedTime() + ']' + ' Changed background color ';
+}
 });
 
 function backColor() {
