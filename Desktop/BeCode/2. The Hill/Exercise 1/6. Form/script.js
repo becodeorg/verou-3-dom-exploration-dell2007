@@ -1,3 +1,4 @@
+//Showing the content inside the input field
 const form = document.getElementById('firstname');
 
 const displayFN = (event) => {
@@ -8,6 +9,7 @@ const displayFN = (event) => {
 }
 form.addEventListener('keyup', displayFN);
 
+//Visible message according to age
 const form2 = document.getElementById('age');
 const hardTrue = document.getElementById('a-hard-truth');
 
@@ -23,3 +25,22 @@ const displayAge = (event) => {
     }
 }
 form2.addEventListener('keyup', displayAge);
+
+//Create visual hint for password error
+const password = document.getElementById('pwd');
+
+
+const newPwrd = (event) => {
+    event.preventDefault();
+
+    const checkPwrd = event.target.value;
+    if (checkPwrd.length < 6) {
+        password.style.backgroundColor ='red';
+    } else {
+        password.style.backgroundColor ='green';
+    }
+}
+
+password.addEventListener('keyup', newPwrd);
+
+//
