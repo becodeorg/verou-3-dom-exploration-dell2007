@@ -28,8 +28,6 @@ form2.addEventListener('keyup', displayAge);
 
 //Create visual hint for password error
 const password = document.getElementById('pwd');
-
-
 const newPwrd = (event) => {
     event.preventDefault();
 
@@ -40,7 +38,20 @@ const newPwrd = (event) => {
         password.style.backgroundColor ='green';
     }
 }
-
 password.addEventListener('keyup', newPwrd);
+
+const confPwrd = document.getElementById('pwd-confirm');
+const confirmation = (event) => {
+    event.preventDefault();
+
+    const matchPwrd = event.target.value;
+    
+    if (matchPwrd === password.value) {
+        confPwrd.style.backgroundColor ='green';
+    } else {
+        confPwrd.style.backgroundColor ='red';
+    }
+}
+confPwrd.addEventListener('keyup', confirmation);
 
 //
