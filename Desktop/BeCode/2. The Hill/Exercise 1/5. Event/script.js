@@ -5,17 +5,24 @@ function getElapsedTime() {
 }
 
 function clickOnSquare(e) {
-    const existDiv = document.querySelector('.displayedsquare-wrapper');
     console.log(e.target.classList[1])
     console.log(getElapsedTime())
+
+    //Create a new div
+    const existDiv = document.querySelector('.displayedsquare-wrapper');
     const newDiv = document.createElement('div');
-    newDiv.className = 'displayedsquare' + ' ' + e.target.classList[1];
+    newDiv.className = 'displayedsquare';
     existDiv.appendChild(newDiv);
 
+    //Duplicate the colors from the existing div boxes
+    const boxColor = e.target.classList[1];
+    newDiv.classList.add(boxColor);
+
+    //Create a log with the action done
     const newList = document.createElement('li');
     const existList = document.querySelector('ul');
     existList.appendChild(newList);
-    newList.innerText = '[' + getElapsedTime() + ']' + ' Created a new ' + e.target.classList[1] + ' square';
+    newList.innerText = '[' + getElapsedTime() + ']' + ' Created a new ' + boxColor + ' square';
 }
 
 const actionsquares = document.querySelectorAll('.actionsquare')
@@ -25,13 +32,14 @@ for (let actionsquare of actionsquares) {
 
 // Changing background color
 const background = document.getElementsByTagName('body')
-document.addEventListener('keypress', (Event) => {
-    backColor();
-    console.log(Event.key);
+document.addEventListener('keydown', function(event) {
+    if (event.key === " ") {
+    backColor()}
 });
+
 function backColor() {
     document.body.style.backgroundColor = randomColor();
-} 
+}
 
 function randomColor() {
     var red = Math.round(Math.random() * 255);
