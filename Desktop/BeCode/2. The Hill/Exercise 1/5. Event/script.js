@@ -23,6 +23,9 @@ function clickOnSquare(e) {
     const existList = document.querySelector('ul');
     existList.appendChild(newList);
     newList.innerText = '[' + getElapsedTime() + ']' + ' Created a new ' + boxColor + ' square';
+
+    //Delete the log pressing i
+    
 }
 
 const actionsquares = document.querySelectorAll('.actionsquare')
@@ -35,6 +38,12 @@ const background = document.getElementsByTagName('body')
 document.addEventListener('keydown', function(event) {
     if (event.key === " ") {
     backColor()}
+
+    //Create a log when background change color
+const otherList = document.createElement('li');
+const sameList = document.querySelector('ul');
+sameList.appendChild(otherList);
+otherList.innerText = '[' + getElapsedTime() + ']' + ' Changed background color ' + event.key;
 });
 
 function backColor() {
